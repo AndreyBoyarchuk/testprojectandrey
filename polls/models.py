@@ -15,5 +15,7 @@ class Choice(models.Model):
 
 class Document(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
-    upload = models.FileField()
+    name= models.CharField(max_length=30)
+    upload = models.FileField(upload_to='mediafiles/')
+
 
