@@ -158,9 +158,10 @@ else:
     STATIC_URL = '/staticfiles/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
+DEFAULT_FILE_STORAGE = 'mysite.storage_backends.MediaStorage'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-
+MEDIA_URL = '/mediafiles/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 django_on_heroku.settings(locals())
